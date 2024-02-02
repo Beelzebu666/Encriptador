@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCRIPTADOR DE TEXTO - ALURA CHALLENGE 1</Em></title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+
+    <main >
+        
+
+        <div class="frame-principal" >
+            <form class="texto-original">
+                <textarea id="texto-original" placeholder="Ingresa Texto para encriptar por favor" onkeydown="challenge()"></textarea>
+            </form>
+
+           <div class="boton-container">
+            <button class="boton" id="btn-encriptar">ENCRIPTAR</button>
+            <button class="boton" id="btn-desencriptar">DESENCRIPTAR</button>
+        
+           </div>
+        </div>
+
+        <div class="frame-secundario">            
+            <form >
+                <textarea id="texto-encriptado" oninput="mostrarElementos()"></textarea>
+            </form>
+            <div class="imagen-boy"> 
+                <img src="img/alura-boy.png" id="alura-boy" >
+            
+                <h3 id="mensaje-alerta">Ningún texto encontrado!</h3><br>
+                <span id="alerta">Agrega texto para Encriptar o Descifrar </span>
+            </div>
+            
+            
+
+            <div class="boton-container">
+             
+             <button class="boton" id="btn-copiar">COPIAR</button>
+            </div>
+        </div>
+
+    </main>
+    
+
+    <footer>
+
+        <p>Developed by Leviathan 2024</p>
+    </footer>
+    <script src="js/challenge.js"></script>
+</body>
+</html>
