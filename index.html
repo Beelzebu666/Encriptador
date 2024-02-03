@@ -17,19 +17,19 @@
 
         <div class="frame-principal" >
             <form class="texto-original">
-                <textarea id="texto-original" placeholder="Ingresa Texto para encriptar por favor" onkeydown="challenge()" onfocusout="mostrarElementos()"></textarea>
+                <textarea id="texto-original" placeholder="Ingresa Texto para encriptar por favor" onkeydown="challenge()" ></textarea>
             </form>
 
            <div class="boton-container">
-            <button class="boton" id="btn-encriptar">ENCRIPTAR</button>
-            <button class="boton" id="btn-desencriptar">DESENCRIPTAR</button>
+            <button class="boton" id="btn-encriptar" onclick="encriptar()">ENCRIPTAR</button>
+            <button class="boton" id="btn-desencriptar" onclick="desEncriptar()">DESENCRIPTAR</button>
         
            </div>
         </div>
 
         <div class="frame-secundario">            
             <form >
-                <textarea id="texto-encriptado" ></textarea>
+                <textarea type="text" id="texto-encriptado" ></textarea>
             </form>
             <div class="imagen-boy"> 
                 <img src="img/alura-boy.png" id="alura-boy" >
@@ -42,7 +42,7 @@
 
             <div class="boton-container">
              
-             <button class="boton" id="btn-copiar">COPIAR</button>
+             <button class="boton" id="btn-copiar" onclick="copyText()">COPIAR</button>
             </div>
         </div>
 
@@ -53,6 +53,6 @@
 
         <p>Developed by Leviathan 2024</p>
     </footer>
-    <script src="js/challenge.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
