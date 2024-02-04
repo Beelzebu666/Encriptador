@@ -14,36 +14,72 @@ const llaves ={
 // variables y constantes 
 
 
-function challenge(event){
-    
+function challenge(event){    
 
     document.getElementById('alura-boy').style.display = 'none'; 
     document.getElementById('mensaje-alerta').style.display = 'none'; 
     document.getElementById('alerta').style.display = 'none';    
     document.getElementById('btn-copiar').style.display = 'block';
-    
-    
-    
-    
-    
+   
 }
 
 function encriptar(){
     let textOriginal =  document.getElementById('texto-original').value;
     let textEncriptado = document.getElementById('texto-encriptado');
-    textEncriptado.innerHTML = textOriginal.replace('o', 'ober');
 
+    textEncriptado.textContent = textOriginal.split(" ").map(palabra => {
+        return palabra.replace(/a/g, 'ai')
+                      .replace(/e/g, 'enter')
+                      .replace(/i/g, 'imes')
+                      .replace(/o/g, 'ober')
+                      .replace(/u/g, 'ufat');  
+    }).join(" ");
 }
+
+
+/*textEncriptado.textContent = textOriginal.replace(/[aeiou]/g, function(match){
+        switch(match){
+            case 'a':
+                return 'ai';
+
+            case 'e':
+                return 'enter';
+
+            case 'i':
+                return 'imes';
+
+            case 'o':
+                return 'ober';
+
+            case 'u':
+                return 'ufat'; 
+
+            default:
+                return match;
+        }
+    });    
+    */
 
 function desEncriptar(){
     let textOriginal =  document.getElementById('texto-original').value;
     let textEncriptado = document.getElementById('texto-encriptado');
-    textEncriptado.innerHTML = textOriginal.replace('ober', 'o');
+    
+        textEncriptado.textContent = textOriginal.split(" ").map(palabra => {
+            return palabra.replace(/ufat/g, 'u') 
+                          .replace(/ober/g, 'o')
+                          .replace(/imes/g, 'i')
+                          .replace(/enter/g, 'e')
+                          .replace(/ai/g, 'a');
+                          
 
+        }).join(" ");
+     
 }
 
 function copyText(){
-    navigator.clipboard.writeText = document.getElementById('texto-encriptado').value;
+    let textoCopia =  document.getElementById('texto-encriptado');
+    textoCopia = textoCopia.innerText;
+    navigator.clipboard.writeText(textoCopia);
 }
 
 function mostrarElementos(){
