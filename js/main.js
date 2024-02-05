@@ -11,10 +11,9 @@ const llaves ={
 
 }
 
-// variables y constantes 
+// Funcion para Ocultar Elementos al empezar 
 
-
-function challenge(event){    
+function ocultarElementos(event){   
 
     document.getElementById('alura-boy').style.display = 'none'; 
     document.getElementById('mensaje-alerta').style.display = 'none'; 
@@ -22,6 +21,8 @@ function challenge(event){
     document.getElementById('btn-copiar').style.display = 'block';
    
 }
+
+//Fucion para Encriptar Texto
 
 function encriptar(){
     let textOriginal =  document.getElementById('texto-original').value;
@@ -60,6 +61,8 @@ function encriptar(){
     });    
     */
 
+ //Funcion para Desencriptar texto 
+
 function desEncriptar(){
     let textOriginal =  document.getElementById('texto-original').value;
     let textEncriptado = document.getElementById('texto-encriptado');
@@ -76,11 +79,15 @@ function desEncriptar(){
      
 }
 
+//Funcion para Copiar texto encriptado
+
 function copyText(){
     let textoCopia =  document.getElementById('texto-encriptado');
     textoCopia = textoCopia.innerText;
     navigator.clipboard.writeText(textoCopia);
 }
+
+//Funcion para mostrar elementos, en PAUSA 
 
 function mostrarElementos(){
    document.getElementById('alura-boy').style.display = '';
@@ -88,3 +95,15 @@ function mostrarElementos(){
         document.getElementById('alerta').style.display = '';
         document.getElementById('btn-copiar').style.display = 'none';
 }
+
+
+// Funcion para ocultar author 
+
+window.addEventListener('scroll', function(){
+    if( window.scrollY < 50){
+        document.getElementById('developer').style.display = 'none';
+    } else {
+        document.getElementById('developer').style.display = "block";
+    }
+
+})
