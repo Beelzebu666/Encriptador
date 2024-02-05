@@ -105,6 +105,14 @@ textarea{
     font-weight: bold;
 }
 
+.texto-encriptado::after{
+    width: 80%;
+    height: 300px;
+    min-height: 50px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
 /*Estilo de Botones*/
 .boton-container{
     margin-top: auto; 
@@ -163,4 +171,152 @@ footer p{
     padding:0;
     font-family: italic;
     font-size: 10px;
+}
+
+
+/* Estilo Responsivo */
+
+@media (max-width:768px){
+    main{
+        display: flex;
+        width: 90%;
+        height: 100%;
+        margin: 0 ;
+        padding: 0;
+        opacity: 1;
+        display: inline-block;
+    }
+
+    /*Estilo cuadros de texto*/
+.frame-principal {
+    width: 80%;  
+    text-align: center; 
+}
+
+.frame-principal, .frame-secundario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    height: 90%;
+    margin: 20px auto;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 1em;
+    padding-bottom: 30px;
+}
+
+.frame-secundario {
+    width: 80%; 
+    margin: 0 auto;
+    text-align: center; 
+}
+
+#mensaje-alerta{
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+#alerta{
+    margin:10px;
+}
+
+/*Estilos Imagen*/
+.imagen-boy{
+    margin: 30px auto;
+    width: 80%;
+    height: 80%;
+    display: block;
+    justify-content: center;
+    
+}
+
+#alura-boy{
+    width: 60%;
+    height: 50%;
+    margin: 0 0 20px 0;
+    text-align: center;    
+    animation: moviendo 5s infinite ease;
+    transform-origin: center;
+}
+
+    .boton-container{
+
+        margin-top: auto; 
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    
+    .boton{
+        width: 100px;
+        height: auto;
+        margin: 10px;
+        font-size: 12px;
+        text-align: center; 
+        border-style: none;
+        border-radius: 1em;
+        transition: all 1s ease;
+    }
+    
+    .boton:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    
+    
+}
+
+@media (max-with: 480px){
+    main{
+        display: flex;
+        width: 90%;
+        height: 100%;
+        margin: 0 ;
+        padding: 0;
+        opacity: 1;
+    }
+    .boton-container{
+        margin-top: auto; 
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    
+    .boton{
+        width: 80px;
+        height: auto;
+        margin: 10px;
+        font-size: 10px;
+        text-align: center; 
+        border-style: none;
+        border-radius: 1em;
+        transition: all 1s ease;
+    }
+    
+    .boton:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    /*Estilos Imagen*/
+.imagen-boy{
+    margin: 30px auto;
+    width: 60%;
+    height: 60%;
+    display: block;
+    justify-content: center;
+    
+}
+
+#alura-boy{
+    width: 50%;
+    height: 40%;
+    margin: 0 0 20px 0;
+    text-align: center;    
+    animation: moviendo 5s infinite ease;
+    transform-origin: center;
+}
 }
