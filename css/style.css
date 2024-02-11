@@ -55,6 +55,21 @@ main{
     margin:10px;
 }
 
+p{
+    margin-top:10px;
+}
+
+
+#reseteo{
+    display:flexbox;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    padding:0;
+    color: #ff3300ea ;
+    font-weight: bold;
+}
+
 /*Estilos Imagen*/
 .imagen-boy{
     width: 100%;
@@ -228,6 +243,7 @@ footer p{
 #alerta{
     margin:10px;
 }
+
 
 /*Estilos Imagen*/
 .imagen-boy{

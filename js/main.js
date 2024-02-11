@@ -76,6 +76,8 @@ function desEncriptar(){
                           
 
         }).join(" ");
+
+    document.getElementById('btn-copiar').innerHTML = 'COPIAR';
      
 }
 
@@ -85,6 +87,7 @@ function copyText(){
     let textoCopia =  document.getElementById('texto-encriptado');
     textoCopia = textoCopia.innerText;
     navigator.clipboard.writeText(textoCopia);
+    document.getElementById('btn-copiar').innerHTML ="COPIADO"
 }
 
 //Funcion para mostrar elementos, en PAUSA 
